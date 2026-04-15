@@ -39,7 +39,8 @@ export default function Navbar()
                     <span className="logo-level">LVL 99</span>
                 </a>
 
-                <button className="navbar-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                <button className="nav-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                    <span></span><span></span><span></span>
                 </button>
 
                 <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
@@ -52,6 +53,9 @@ export default function Navbar()
                             </a>
                         </li>
                     ))}
+                    <li className="nav-status">
+                        <span className="status-dot"></span> ONLINE
+                    </li>
                 </ul>
             </div>
         </nav>
