@@ -1,9 +1,11 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import StarrySky from "./components/StarrySky.jsx";
 
 function App() {
   return (
     <>
+      <StarrySky/>
       <Navbar/>
       <main className="main-content">
           <footer className="footer">
