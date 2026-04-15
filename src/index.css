@@ -46,3 +46,52 @@ body {
   overflow-x: hidden;
   background: var(--bg-deep);
 }
+
+#root {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+::selection {
+    background: var(--green);
+    color: var(--bg-deep);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--green-dim);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--green);
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--cyan);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-head), serif;
+    color: var(--text-bright);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+p {
+    margin: 0;
+}
