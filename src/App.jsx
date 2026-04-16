@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import StarrySky from "./components/StarrySky.jsx";
 import HeroSection from './components/HeroSection.jsx'
+import AboutSection from './components/AboutSection.jsx'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar/>
       <main className="main-content">
           <HeroSection/>
+          <AboutSection/>
           <footer className="footer">
               <div className="footer-inner">
                   <span className="footer-code">&lt;/&gt;</span>

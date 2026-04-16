@@ -7,7 +7,7 @@ const SECTIONS = ['hero', 'about', 'projects'];
 
 const NAV_LINKS = [
     { id: 'hero',     label: '// HOME' },
-    { id: 'about',    label: '// ABOUT' },
+    { id: 'about',    label: '// ÜBER MICH' },
     { id: 'projects', label: '// QUESTS' },
 ];
 
@@ -38,7 +38,7 @@ export default function Navbar() {
             <div className="nav-inner">
                 <a href="#hero" className="nav-logo">
                     <span className="logo-bracket">&lt;</span>
-                    <span className="logo-text">Dev</span>
+                    <span className="logo-text">DEV</span>
                     <span className="logo-slash">/</span>
                     <span className="logo-bracket">&gt;</span>
                     <span className="logo-level">LVL 99</span>
