@@ -519,7 +519,8 @@
 }
 
 /* ------- About ------- */
-.about-section {
+.about-section,
+.projects-section {
     padding: 100px 24px;
     max-width: 1100px;
     margin: 0 auto;
@@ -641,6 +642,168 @@
     font-size: 13px;
     color: var(--text-dim);
     margin-top: 2px;
+}
+
+/* ------- Quests ------- */
+.quest-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 24px;
+}
+@media (max-width: 520px) {
+    .quest-list { grid-template-columns: 1fr; }
+}
+
+.quest-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.quest-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--rarity-color, var(--green)), transparent);
+    opacity: 0.6;
+}
+.quest-card:hover {
+    border-color: var(--border-glow);
+    background: var(--bg-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 255, 65, 0.08);
+}
+.quest-card.expanded {
+    border-color: var(--rarity-color, var(--green));
+}
+
+.quest-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.quest-rarity,
+.quest-status,
+.tech-tag,
+.quest-expand-hint {
+    font-family: var(--font-mono), serif;
+    font-size: 11px;
+}
+
+.quest-status,
+.tech-tag {
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+.quest-rarity { letter-spacing: 2px; font-weight: 700; }
+.quest-status { letter-spacing: 1px; }
+.quest-status[data-status="COMPLETED"] {
+    color: var(--green);
+    background: rgba(0, 255, 65, 0.1);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+}
+.quest-status[data-status="IN_PROGRESS"] {
+    color: var(--gold);
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.quest-title {
+    font-family: var(--font-head), serif;
+    font-size: 18px;
+    color: var(--text-bright);
+    margin: 0 0 4px;
+    letter-spacing: 1px;
+}
+.quest-difficulty {
+    font-size: 14px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+.quest-desc {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.quest-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+.tech-tag {
+    color: var(--cyan);
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.quest-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s;
+    opacity: 0;
+}
+.quest-details.show {
+    max-height: 300px;
+    opacity: 1;
+}
+.quest-loot {
+    padding: 16px;
+    background: var(--bg-dark);
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+}
+.loot-header,
+.loot-item {
+    font-family: var(--font-mono), serif;
+    font-size: 12px;
+}
+.loot-header {
+    color: var(--gold);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
+}
+.loot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.loot-item { color: var(--green); }
+.quest-xp {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono), serif;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+}
+.xp-value {
+    color: var(--purple);
+    font-weight: 700;
+}
+.quest-actions {
+    display: flex;
+    gap: 12px;
+}
+.quest-expand-hint {
+    color: var(--text-dim);
+    text-align: center;
+    margin-top: 8px;
+    letter-spacing: 2px;
 }
 
 /* ------- Footer ------- */

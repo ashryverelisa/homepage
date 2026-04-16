@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import StarrySky from "./components/StarrySky.jsx";
 import HeroSection from './components/HeroSection.jsx'
 import AboutSection from './components/AboutSection.jsx'
+import ProjectsSection from './components/ProjectsSection.jsx'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <main className="main-content">
           <HeroSection/>
           <AboutSection/>
+          <ProjectsSection/>
           <footer className="footer">
               <div className="footer-inner">
                   <span className="footer-code">&lt;/&gt;</span>

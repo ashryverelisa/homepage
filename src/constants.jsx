@@ -37,6 +37,70 @@ export const NAVBAR = {
     ],
 };
 
+export const PROJECTS = {
+    RARITY_COLORS: {
+        COMMON:    '#9ca3af',
+        UNCOMMON:  '#22c55e',
+        RARE:      '#3b82f6',
+        EPIC:      '#a855f7',
+        LEGENDARY: '#f59e0b',
+        MYTHIC:    '#ef4444',
+    },
+    RARITY_LABELS: {
+        COMMON:    'NORMAL',
+        UNCOMMON:  'UNGEWÖHNLICH',
+        RARE:      'SELTEN',
+        EPIC:      'EPISCH',
+        LEGENDARY: 'LEGENDÄR',
+        MYTHIC:    'MYTHISCH',
+    },
+    STATUS_LABELS: {
+        COMPLETED:   'BEENDET',
+        IN_PROGRESS: 'IN ARBEIT',
+    },
+    LIST: [
+        {
+            id: 1,
+            title:       'Netmancer',
+            difficulty:  '★★★★☆',
+            rarity:      'LEGENDARY',
+            status:      'COMPLETED',
+            xpReward:    5000,
+            description: 'Ein Music Player und Media Browser über UPnP/DLNA.',
+            tech:        ['.Net', 'Avalonia'],
+            loot:        ['Music Player ohne Werbung'],
+            github:      'https://github.com/ashryverelisa/Netmancer',
+            live:        '#',
+        },
+        {
+            id: 2,
+            title:       'Daily-Side-Quest-Generator',
+            difficulty:  '★★★☆☆',
+            rarity:      'EPIC',
+            status:      'COMPLETED',
+            xpReward:    7500,
+            description: 'Erstellt jeden Tag neues Aufgaben mit Belohungen im LitRPG Style.',
+            tech:        ['.Net', 'Blazor'],
+            loot:        [],
+            github:      'https://github.com/ashryverelisa/Daily-Side-Quest-Generator',
+            live:        '#',
+        },
+        {
+            id: 3,
+            title:       'LitRPG World & Progression Manager',
+            difficulty:  '★★★★★',
+            rarity:      'MYTHIC',
+            status:      'IN_PROGRESS',
+            xpReward:    10000,
+            description: 'Ein Tool zum Verwalten von Charakteren, Welten und Fortschritt in LitRPG Geschichten.',
+            tech:        ['.Net', 'Avalonia'],
+            loot:        [],
+            github:      'https://github.com/ashryverelisa/LitRPG-Progression-Manager',
+            live:        '#',
+        }
+    ],
+};
+
 export const STARRY_SKY = {
     PIXELS_PER_STAR:       2800,
     STAR_MIN_RADIUS:       0.3,
