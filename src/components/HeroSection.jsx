@@ -73,16 +73,16 @@ export default function HeroSection() {
                     </div>
 
                     <p className="hero-subtitle">
-                        I build digital worlds from code. <br />
-                        <span className="matrix-accent">Welcome to the real world.</span>
+                        Ich erschaffe digitale Welten aus Code. <br />
+                        <span className="matrix-accent">Willkommen in der echten Welt.</span>
                     </p>
 
                     <div className="hero-actions">
                         <a href="#projects" className="btn btn-primary">
-                            <span className="btn-icon">◆</span> View Quest Log
+                            <span className="btn-icon">◆</span> Quests
                         </a>
                         <a href="#contact" className="btn btn-secondary">
-                            <span className="btn-icon">▸</span> Send Message
+                            <span className="btn-icon">▸</span> Nachricht senden
                         </a>
                     </div>
                     <div className="card-border-bottom" />
