@@ -1,3 +1,76 @@
+/* Glitch Text Effect */
+@keyframes glitch-1 {
+    0%, 100% { clip-path: inset(40% 0 61% 0); transform: translate(-2px, 2px); }
+    20% { clip-path: inset(92% 0 1% 0); transform: translate(1px, -1px); }
+    40% { clip-path: inset(43% 0 1% 0); transform: translate(-1px, 3px); }
+    60% { clip-path: inset(25% 0 58% 0); transform: translate(3px, 1px); }
+    80% { clip-path: inset(54% 0 7% 0); transform: translate(-3px, -2px); }
+}
+
+@keyframes glitch-2 {
+    0%, 100% { clip-path: inset(65% 0 13% 0); transform: translate(2px, -1px); }
+    20% { clip-path: inset(5% 0 78% 0); transform: translate(-1px, 2px); }
+    40% { clip-path: inset(79% 0 2% 0); transform: translate(1px, -3px); }
+    60% { clip-path: inset(33% 0 45% 0); transform: translate(-2px, 1px); }
+    80% { clip-path: inset(10% 0 68% 0); transform: translate(3px, 2px); }
+}
+
+@keyframes scanline {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 5px var(--green-dark), 0 0 10px var(--green-dark); }
+    50% { box-shadow: 0 0 15px var(--green-dim), 0 0 30px var(--green-dark); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes slide-in-left {
+    from { transform: translateX(-30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bar-fill {
+    from { width: 0; }
+}
+
+.glitch {
+    position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.glitch::before {
+    color: var(--cyan);
+    animation: glitch-1 3s infinite linear alternate-reverse;
+    z-index: -1;
+}
+
+.glitch::after {
+    color: var(--red);
+    animation: glitch-2 3s infinite linear alternate-reverse;
+    z-index: -1;
+}
+
 .main-content {
     position: relative;
     z-index: 1;
