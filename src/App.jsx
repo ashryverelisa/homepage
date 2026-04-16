@@ -1,6 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import StarrySky from "./components/StarrySky.jsx";
+import HeroSection from './components/HeroSection.jsx'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <StarrySky/>
       <Navbar/>
       <main className="main-content">
+          <HeroSection/>
           <footer className="footer">
               <div className="footer-inner">
                   <span className="footer-code">&lt;/&gt;</span>
