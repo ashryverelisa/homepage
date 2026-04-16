@@ -79,7 +79,7 @@ export const PROJECTS = {
             rarity:      'EPIC',
             status:      'COMPLETED',
             xpReward:    7500,
-            description: 'Erstellt jeden Tag neues Aufgaben mit Belohungen im LitRPG Style.',
+            description: 'Erstellt jeden Tag neue Aufgaben mit Belohungen im LitRPG Style.',
             tech:        ['.Net', 'Blazor'],
             loot:        [],
             github:      'https://github.com/ashryverelisa/Daily-Side-Quest-Generator',
