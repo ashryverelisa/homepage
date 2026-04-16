@@ -1,18 +1,4 @@
-const TRAITS = [
-    { icon: '⚡', name: 'Eigenschaft: Schnelle Auffassungsgabe', desc: 'Erhält +50 % EP durch neue Technologie-Stacks' },
-    { icon: '🛡', name: 'Eigenschaft: Bug Schlächter',           desc: 'Kritische Treffer gegen Produktionsfehler' },
-    { icon: '🔮', name: 'Eigenschaft: Code Zauberer',            desc: 'Verwandelt Koffein in funktionierende Software' },
-    { icon: '🗡', name: "Eigenschaft: Debugger's Auge",          desc: 'Kann „Off-by-One"-Fehler im Handumdrehen aufspüren' },
-];
-
-const CHARACTER_STATS = [
-    { label: 'NAME',     value: 'Elisa' },
-    { label: 'KLASSE',   value: 'Developer' },
-    { label: 'VOLK',     value: 'Mensch (koffeinhaltig)' },
-    { label: 'LEVEL',    value: '99', accent: true },
-    { label: 'GILDE',    value: 'Backend Developer' },
-    { label: 'HERKUNFT', value: 'Die digitale Welt' },
-];
+import { ABOUT } from '../constants';
 
 function SectionHeader() {
     return (
@@ -44,7 +30,7 @@ function CharacterSheet() {
                 <span>CHARACTER STATUS</span>
             </div>
             <div className="sheet-body">
-                {CHARACTER_STATS.map(({ label, value, accent }) => (
+                {ABOUT.CHARACTER_STATS.map(({ label, value, accent }) => (
                     <SheetRow key={label} label={label} value={value} accent={accent} />
                 ))}
             </div>
@@ -100,7 +86,7 @@ function PassiveTraits() {
                 <span>PASSIVE FÄHIGKEITEN</span>
             </div>
             <div className="traits-grid">
-                {TRAITS.map((t) => (
+                {ABOUT.TRAITS.map((t) => (
                     <TraitCard key={t.name} {...t} />
                 ))}
             </div>

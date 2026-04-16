@@ -1,32 +1,22 @@
 import { useState, useEffect } from 'react';
-
-const SCROLL_THRESHOLD = 50;
-const ACTIVE_OFFSET    = 200;
-
-const SECTIONS = ['hero', 'about', 'projects'];
-
-const NAV_LINKS = [
-    { id: 'hero',     label: '// HOME' },
-    { id: 'about',    label: '// ÜBER MICH' },
-    { id: 'projects', label: '// QUESTS' },
-];
+import { NAVBAR } from '../constants';
 
 function getActiveSection() {
-    for (const id of [...SECTIONS].reverse()) {
+    for (const id of [...NAVBAR.SECTIONS].reverse()) {
         const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= ACTIVE_OFFSET) return id;
+        if (el && el.getBoundingClientRect().top <= NAVBAR.ACTIVE_OFFSET) return id;
     }
-    return SECTIONS[0];
+    return NAVBAR.SECTIONS[0];
 }
 
 export default function Navbar() {
-    const [scrolled, setScrolled] = useState(false);
-    const [active, setActive] = useState(SECTIONS[0]);
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled]   = useState(false);
+    const [active, setActive]       = useState(NAVBAR.SECTIONS[0]);
+    const [menuOpen, setMenuOpen]   = useState(false);
 
     useEffect(() => {
         const onScroll = () => {
-            setScrolled(window.scrollY > SCROLL_THRESHOLD);
+            setScrolled(window.scrollY > NAVBAR.SCROLL_THRESHOLD);
             setActive(getActiveSection());
         };
         window.addEventListener('scroll', onScroll);
@@ -49,7 +39,7 @@ export default function Navbar() {
                 </button>
 
                 <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-                    {NAV_LINKS.map(({ id, label }) => (
+                    {NAVBAR.NAV_LINKS.map(({ id, label }) => (
                         <li key={id}>
                             <a
                                 href={`#${id}`}

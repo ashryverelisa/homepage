@@ -1,0 +1,94 @@
+export const ABOUT = {
+    CHARACTER_STATS: [
+        { label: 'NAME',     value: 'Elisa' },
+        { label: 'KLASSE',   value: 'Developer' },
+        { label: 'VOLK',     value: 'Mensch (koffeinhaltig)' },
+        { label: 'LEVEL',    value: '99', accent: true },
+        { label: 'GILDE',    value: 'Backend Developer' },
+        { label: 'HERKUNFT', value: 'Die digitale Welt' },
+    ],
+    TRAITS: [
+        { icon: '⚡', name: 'Eigenschaft: Schnelle Auffassungsgabe', desc: 'Erhält +50 % EP durch neue Technologie-Stacks' },
+        { icon: '🛡', name: 'Eigenschaft: Bug Schlächter',           desc: 'Kritische Treffer gegen Produktionsfehler' },
+        { icon: '🔮', name: 'Eigenschaft: Code Zauberer',            desc: 'Verwandelt Koffein in funktionierende Software' },
+        { icon: '🗡', name: "Eigenschaft: Debugger's Auge",          desc: 'Kann „Off-by-One"-Fehler im Handumdrehen aufspüren' },
+    ],
+};
+
+export const HERO = {
+    TYPING_SPEED_MS: 50,
+    CURSOR_BLINK_MS: 530,
+    FULL_TEXT: '> INITIALIZING DEVELOPER PROFILE...',
+    STATS: [
+        { label: 'HP', barClass: 'hp', fill: '100%', val: '9999/9999' },
+        { label: 'MP', barClass: 'mp', fill: '85%',  val: '8500/9999' },
+        { label: 'XP', barClass: 'xp', fill: '72%',  val: '72%' },
+    ],
+};
+
+export const NAVBAR = {
+    SCROLL_THRESHOLD: 50,
+    ACTIVE_OFFSET:    200,
+    SECTIONS: ['hero', 'about', 'projects'],
+    NAV_LINKS: [
+        { id: 'hero',     label: '// HOME' },
+        { id: 'about',    label: '// ÜBER MICH' },
+        { id: 'projects', label: '// QUESTS' },
+    ],
+};
+
+export const STARRY_SKY = {
+    PIXELS_PER_STAR:       2800,
+    STAR_MIN_RADIUS:       0.3,
+    STAR_MAX_RADIUS:       1.6,
+    STAR_MIN_OPACITY:      0.3,
+    STAR_MAX_OPACITY:      0.7,
+    STAR_GLOW_THRESHOLD:   1.1,
+    STAR_GLOW_RADIUS_MULT: 3,
+    STAR_GLOW_ALPHA:       0.06,
+    STAR_LIGHTNESS:        85,
+
+    TWINKLE_MIN_SPEED:  0.005,
+    TWINKLE_MAX_SPEED:  0.02,
+    TWINKLE_AMPLITUDE:  0.3,
+    TWINKLE_MIN_ALPHA:  0.05,
+    TWINKLE_SPEED_MULT: 60,
+    FRAME_TIME_SEC:     0.016,
+
+    TINT_CHANCE: 0.8,
+    HUE_BLUE:    220,
+    HUE_WARM:    35,
+    SAT_MIN:     20,
+    SAT_RANGE:   40,
+
+    SHOOT_MAX_COUNT:   2,
+    SHOOT_SPAWN_X:     0.8,
+    SHOOT_SPAWN_Y:     0.4,
+    SHOOT_MIN_LEN:     60,
+    SHOOT_LEN_RANGE:   80,
+    SHOOT_MIN_SPEED:   4,
+    SHOOT_SPEED_RANGE: 6,
+    SHOOT_BASE_ANGLE:  Math.PI / 6,
+    SHOOT_ANGLE_RANGE: Math.PI / 8,
+    SHOOT_MIN_LIFE:    60,
+    SHOOT_LIFE_RANGE:  40,
+    SHOOT_LINE_WIDTH:  1.5,
+    SHOOT_HEAD_RADIUS: 1.5,
+    SHOOT_TAIL_MID:    0.6,
+    SHOOT_TAIL_ALPHA:  0.4,
+    SHOOT_HEAD_ALPHA:  0.9,
+    SHOOT_SPAWN_PROB:  0.004,
+
+    SKY_COLOR:         '#050508',
+    DEPTH_CENTER_X:    0.5,
+    DEPTH_CENTER_Y:    0.15,
+    DEPTH_RADIUS:      0.7,
+    DEPTH_INNER_COLOR: 'rgba(15, 15, 35, 0.45)',
+    DEPTH_OUTER_COLOR: 'rgba(5, 5, 8, 0)',
+
+    NEBULAE: [
+        { cx: 0.25, cy: 0.3, r: 0.35, color: 'rgba(0,255,65,0.012)' },
+        { cx: 0.7,  cy: 0.2, r: 0.3,  color: 'rgba(0,212,255,0.010)' },
+        { cx: 0.5,  cy: 0.7, r: 0.4,  color: 'rgba(168,85,247,0.008)' },
+    ],
+};

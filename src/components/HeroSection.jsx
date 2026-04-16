@@ -1,29 +1,38 @@
 import { useState, useEffect } from 'react';
+import { HERO } from '../constants';
 
-const TYPING_SPEED_MS= 50;
-const CURSOR_BLINK_MS = 530;
+function StatBar({ label, barClass, fill, val }) {
+    return (
+        <div className="stat-chip">
+            <span className="stat-label">{label}</span>
+            <div className={`stat-bar ${barClass}`}>
+                <div className="stat-fill" style={{ width: fill }} />
+            </div>
+            <span className="stat-val">{val}</span>
+        </div>
+    );
+}
 
 export default function HeroSection() {
     const [displayText, setDisplayText] = useState('');
     const [showCursor, setShowCursor] = useState(true);
-    const fullText = '> INITIALIZING DEVELOPER PROFILE...';
 
     useEffect(() => {
         let i = 0;
-        const typeInterval = setInterval(() => {
-            if (i <= fullText.length) {
-                setDisplayText(fullText.slice(0, i));
+        const interval = setInterval(() => {
+            if (i <= HERO.FULL_TEXT.length) {
+                setDisplayText(HERO.FULL_TEXT.slice(0, i));
                 i++;
             } else {
-                clearInterval(typeInterval);
+                clearInterval(interval);
             }
-        }, TYPING_SPEED_MS);
-        return () => clearInterval(typeInterval);
+        }, HERO.TYPING_SPEED_MS);
+        return () => clearInterval(interval);
     }, []);
 
     useEffect(() => {
-        const cursorInterval = setInterval(() => setShowCursor(c => !c), CURSOR_BLINK_MS);
-        return () => clearInterval(cursorInterval);
+        const interval = setInterval(() => setShowCursor(c => !c), HERO.CURSOR_BLINK_MS);
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -40,36 +49,16 @@ export default function HeroSection() {
                         <span className="card-tag">[ PLAYER PROFILE ]</span>
                     </div>
 
-                    <h1 className="hero-title glitch" data-text="elisa">
-                        Elisa
-                    </h1>
+                    <h1 className="hero-title glitch" data-text="elisa">Elisa</h1>
                     <p className="hero-class">
                         <span className="class-icon">⚔</span> Developer{' '}
                         <span className="hero-level">LVL 99</span>
                     </p>
 
                     <div className="hero-stats-bar">
-                        <div className="stat-chip">
-                            <span className="stat-label">HP</span>
-                            <div className="stat-bar hp">
-                                <div className="stat-fill" style={{ width: '100%' }} />
-                            </div>
-                            <span className="stat-val">9999/9999</span>
-                        </div>
-                        <div className="stat-chip">
-                            <span className="stat-label">MP</span>
-                            <div className="stat-bar mp">
-                                <div className="stat-fill" style={{ width: '85%' }} />
-                            </div>
-                            <span className="stat-val">8500/9999</span>
-                        </div>
-                        <div className="stat-chip">
-                            <span className="stat-label">XP</span>
-                            <div className="stat-bar xp">
-                                <div className="stat-fill" style={{ width: '72%' }} />
-                            </div>
-                            <span className="stat-val">72%</span>
-                        </div>
+                        {HERO.STATS.map((s) => (
+                            <StatBar key={s.label} {...s} />
+                        ))}
                     </div>
 
                     <p className="hero-subtitle">
