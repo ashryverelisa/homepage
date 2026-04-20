@@ -58,6 +58,11 @@ function StorySection() {
                     neuen Technologien, engagiere mich in Open-Source-Projekten oder vertiefe meine Kenntnisse.
                 </p>
                 <p className="story-text">
+                    Abseits vom Code lese ich leidenschaftlich gerne LitRPG und tauche in ihre Welten aus
+                    Stats, Quests und Progression ein. Diese Begeisterung möchte ich auch in meine Projekte tragen
+                    und eigene Tools entwickeln, die das LitRPG-Erlebnis für Leser*innen und Autor*innen bereichern.
+                </p>
+                <p className="story-text">
                     Meine Mission? Code zu schreiben, der so sauber ist, dass er die Code-Prüfung eines legendären
                     Entwickler-NPCs bestehen würde. Mein oberstes Ziel: Software zu entwickeln, die etwas bewirkt.
                 </p>

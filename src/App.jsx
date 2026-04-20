@@ -4,6 +4,7 @@ import StarrySky from "./components/StarrySky.jsx";
 import HeroSection from './components/HeroSection.jsx'
 import AboutSection from './components/AboutSection.jsx'
 import ProjectsSection from './components/ProjectsSection.jsx'
+import ContactSection from './components/ContactSection.jsx'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <HeroSection/>
           <AboutSection/>
           <ProjectsSection/>
+          <ContactSection/>
           <footer className="footer">
               <div className="footer-inner">
                   <span className="footer-code">&lt;/&gt;</span>

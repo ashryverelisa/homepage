@@ -70,9 +70,6 @@ export default function HeroSection() {
                         <a href="#projects" className="btn btn-primary">
                             <span className="btn-icon">◆</span> Quests
                         </a>
-                        <a href="#contact" className="btn btn-secondary">
-                            <span className="btn-icon">▸</span> Nachricht senden
-                        </a>
                     </div>
                     <div className="card-border-bottom" />
                 </div>

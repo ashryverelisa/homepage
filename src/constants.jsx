@@ -1,11 +1,16 @@
 export const ABOUT = {
     CHARACTER_STATS: [
-        { label: 'NAME',     value: 'Elisa' },
-        { label: 'KLASSE',   value: 'Developer' },
-        { label: 'VOLK',     value: 'Mensch (koffeinhaltig)' },
-        { label: 'LEVEL',    value: '99', accent: true },
-        { label: 'GILDE',    value: 'Backend Developer' },
-        { label: 'HERKUNFT', value: 'Die digitale Welt' },
+        { label: 'NAME',       value: 'Elisa' },
+        { label: 'KLASSE',     value: 'Developer' },
+        { label: 'VOLK',       value: 'Mensch (koffeinhaltig)' },
+        { label: 'LEVEL',      value: '99', accent: true },
+        { label: 'GILDE',      value: 'Backend Developer' },
+        { label: 'HERKUNFT',   value: 'Die digitale Welt' },
+        { label: 'HAUPTWAFFE', value: 'Mechanische Tastatur' },
+        { label: 'SPRACHEN',   value: 'C#, VB, PHP' },
+        { label: 'GENRE',      value: 'LitRPG' },
+        { label: 'BUFF',       value: '☕ Koffein-Aura' },
+        { label: 'STATUS',     value: 'VERFÜGBAR', accent: true },
     ],
     TRAITS: [
         { icon: '⚡', name: 'Eigenschaft: Schnelle Auffassungsgabe', desc: 'Erhält +50 % EP durch neue Technologie-Stacks' },
@@ -29,11 +34,32 @@ export const HERO = {
 export const NAVBAR = {
     SCROLL_THRESHOLD: 50,
     ACTIVE_OFFSET:    200,
-    SECTIONS: ['hero', 'about', 'projects'],
+    SECTIONS: ['hero', 'about', 'projects', 'contact'],
     NAV_LINKS: [
         { id: 'hero',     label: '// HOME' },
         { id: 'about',    label: '// ÜBER MICH' },
         { id: 'projects', label: '// QUESTS' },
+        { id: 'contact',  label: '// KONTAKT' },
+    ],
+};
+
+export const CONTACT = {
+    INTRO: 'Finde mich in der digitalen Welt über die folgenden Kanäle.',
+    LINKS: [
+        {
+            id: 'github',
+            icon: '◈',
+            label: 'GitHub',
+            handle: '@ashryverelisa',
+            url: 'https://github.com/ashryverelisa',
+        },
+        {
+            id: 'mastodon',
+            icon: '✦',
+            label: 'Mastodon',
+            handle: '@Ashryver@chaos.social',
+            url: 'https://chaos.social/@Ashryver',
+        },
     ],
 };
 
