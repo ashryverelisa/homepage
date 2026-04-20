@@ -4,7 +4,7 @@ export default function ContactSection() {
     return (
         <section id="contact" className="contact-section">
             <div className="section-header">
-                <span className="section-tag">// SECTION_04</span>
+                <span className="section-tag">// SECTION_05</span>
                 <h2 className="section-title glitch" data-text="KONTAKT">
                     <span className="title-bracket">&lt;</span> KONTAKT{' '}
                     <span className="title-bracket">/&gt;</span>

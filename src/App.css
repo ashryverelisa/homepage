@@ -521,6 +521,7 @@
 /* ------- About ------- */
 .about-section,
 .projects-section,
+.npcs-section,
 .contact-section {
     padding: 100px 24px;
     max-width: 1100px;
@@ -536,6 +537,7 @@
 .about-character-sheet,
 .about-story,
 .about-traits,
+.npcs-panel,
 .contact-panel {
     background: var(--bg-panel);
     border: 1px solid var(--border);
@@ -547,6 +549,7 @@
 .traits-header,
 .stats-header,
 .form-header,
+.npcs-header,
 .contact-header {
     font-family: var(--font-mono), serif;
     font-size: 13px;
@@ -885,6 +888,104 @@
     color: var(--green);
 }
 
+/* ------- NPC Codex ------- */
+.npcs-body {
+    padding: 24px 20px;
+}
+.npcs-intro {
+    font-size: 14px;
+    color: var(--text-dim);
+    font-family: var(--font-mono), serif;
+    text-align: center;
+    margin: 0 0 24px;
+    letter-spacing: 1px;
+}
+.npc-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 24px;
+}
+.npc-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.npc-card:hover {
+    border-color: var(--border-glow);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 255, 65, 0.08);
+}
+.npc-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--border);
+}
+.npc-avatar {
+    flex-shrink: 0;
+}
+.npc-icon {
+    font-size: 26px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 65, 0.08);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--green);
+}
+.npc-nameplate {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+.npc-name {
+    font-family: var(--font-mono), serif;
+    font-size: 16px;
+    color: var(--green);
+    letter-spacing: 1px;
+}
+.npc-role {
+    font-family: var(--font-mono), serif;
+    font-size: 10px;
+    color: var(--cyan);
+    letter-spacing: 2px;
+    align-self: flex-start;
+    padding: 3px 8px;
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 3px;
+}
+.npc-quote {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-dim);
+    border-left: 2px solid var(--green-dark);
+    position: relative;
+}
+.npc-quote::before {
+    content: '>';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    color: var(--green);
+    font-family: var(--font-mono), serif;
+    font-size: 14px;
+    background: var(--bg-dark);
+    padding-right: 6px;
+}
+
 /* ------- Footer ------- */
 .footer {
     text-align: center;
@@ -926,4 +1027,5 @@
     .hero-player-card { padding: 24px 16px; }
     .section-title { font-size: 24px; }
     .contact-links { flex-direction: column; align-items: center; }
+    .npc-list { grid-template-columns: 1fr; }
 }

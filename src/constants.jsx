@@ -34,12 +34,47 @@ export const HERO = {
 export const NAVBAR = {
     SCROLL_THRESHOLD: 50,
     ACTIVE_OFFSET:    200,
-    SECTIONS: ['hero', 'about', 'projects', 'contact'],
+    SECTIONS: ['hero', 'about', 'projects', 'npcs', 'contact'],
     NAV_LINKS: [
         { id: 'hero',     label: '// HOME' },
         { id: 'about',    label: '// ÜBER MICH' },
         { id: 'projects', label: '// QUESTS' },
+        { id: 'npcs',     label: '// NPCS' },
         { id: 'contact',  label: '// KONTAKT' },
+    ],
+};
+
+export const NPCS = {
+    INTRO: 'Stimmen aus der Gilde — was andere Abenteurer über diese Entwicklerin berichten.',
+    LIST: [
+        {
+            id: 'guildmaster',
+            name: 'Die Gildenmeisterin',
+            role: 'QUEST-GEBERIN',
+            icon: '👑',
+            quote: 'Elisa liefert Quests termingerecht ab und hinterlässt den Code sauberer, als sie ihn vorgefunden hat.',
+        },
+        {
+            id: 'blacksmith',
+            name: 'Der Schmied',
+            role: 'DEVOPS-VETERAN',
+            icon: '⚒',
+            quote: 'Sie testet ihre Waffen selbst CI-Pipelines, die bei ihr einmal laufen, laufen bei allen.',
+        },
+        {
+            id: 'sage',
+            name: 'Der Weise',
+            role: 'CODE-MENTOR',
+            icon: '🧙',
+            quote: 'Debuggt Legacy-Dungeons mit der Ruhe einer Magierin, die weiß, dass jeder Bug eine Geschichte erzählt.',
+        },
+        {
+            id: 'merchant',
+            name: 'Die Händlerin',
+            role: 'PRODUCT-OWNERIN',
+            icon: '📜',
+            quote: 'Fragt die richtigen Fragen, bevor sie eine Zeile Code schreibt spart der Gilde ganze Gold-Truhen.',
+        },
     ],
 };
 

@@ -4,6 +4,7 @@ import StarrySky from "./components/StarrySky.jsx";
 import HeroSection from './components/HeroSection.jsx'
 import AboutSection from './components/AboutSection.jsx'
 import ProjectsSection from './components/ProjectsSection.jsx'
+import NpcQuotesSection from './components/NpcQuotesSection.jsx'
 import ContactSection from './components/ContactSection.jsx'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <HeroSection/>
           <AboutSection/>
           <ProjectsSection/>
+          <NpcQuotesSection/>
           <ContactSection/>
           <footer className="footer">
               <div className="footer-inner">
