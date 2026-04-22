@@ -38,6 +38,7 @@ export const NAVBAR = {
     NAV_LINKS: [
         { id: 'hero',     label: '// HOME' },
         { id: 'about',    label: '// ÜBER MICH' },
+        { id: 'skills', label: '// SKILLS'},
         { id: 'projects', label: '// QUESTS' },
         { id: 'npcs',     label: '// NPCS' },
         { id: 'contact',  label: '// KONTAKT' },
@@ -159,6 +160,28 @@ export const PROJECTS = {
             github:      'https://github.com/ashryverelisa/LitRPG-Progression-Manager',
             live:        '#',
         }
+    ],
+};
+
+export const SKILLS = {
+    LIST: [
+        { name: 'CSharp',    level: 95, category: 'Sprache', icon: 'C#' },
+        { name: 'PHP',       level: 70, category: 'Sprache', icon: 'PH' },
+        { name: 'React',       level: 30, category: 'Sprache', icon: 'RE' },
+        { name: 'CSS / SCSS',level: 50, category: 'Style',    icon: 'CS' },
+        { name: 'SQL',       level: 80, category: 'Datenbank', icon: 'SQ' },
+        { name: 'MongoDB',    level: 80, category: 'Datenbank',   icon: 'MO' },
+        { name: 'Docker',    level: 80, category: 'DevOps',   icon: 'DK' },
+        { name: 'Git',       level: 93, category: 'Tool',     icon: 'GT' },
+        { name: 'Azure',     level: 70, category: 'Cloud',    icon: 'AZ' },
+    ],
+    STAT_POINTS: [
+        { label: 'Stärke',           value: 85, desc: 'Backend Stärke' },
+        { label: 'Geschicklichkeit', value: 92, desc: 'Coding-Tempo' },
+        { label: 'Intelligenz',      value: 95, desc: 'Problemlösung' },
+        { label: 'Weisheit',         value: 88, desc: 'Architektur' },
+        { label: 'Charisma',         value: 80, desc: 'Kommunikation' },
+        { label: 'Glück',            value: 77, desc: 'Fehlerfreie Deploys' },
     ],
 };
 

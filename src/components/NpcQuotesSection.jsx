@@ -1,10 +1,10 @@
 import { NPCS } from '../constants';
 
-export default function NpcQuotesSection() {
+export default function NpcQuotesSection({ sectionIndex }) {
     return (
         <section id="npcs" className="npcs-section">
             <div className="section-header">
-                <span className="section-tag">// SECTION_04</span>
+                <span className="section-tag">// SECTION_{String(sectionIndex).padStart(2, '0')}</span>
                 <h2 className="section-title glitch" data-text="NPC CODEX">
                     <span className="title-bracket">&lt;</span> NPC CODEX{' '}
                     <span className="title-bracket">/&gt;</span>

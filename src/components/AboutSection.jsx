@@ -1,9 +1,9 @@
 import { ABOUT } from '../constants';
 
-function SectionHeader() {
+function SectionHeader({ index }) {
     return (
         <div className="section-header">
-            <span className="section-tag">// SECTION_02</span>
+            <span className="section-tag">// SECTION_{String(index).padStart(2, '0')}</span>
             <h2 className="section-title glitch" data-text="Über mich">
                 <span className="title-bracket">&lt;</span> Über mich{' '}
                 <span className="title-bracket">/&gt;</span>
@@ -99,10 +99,10 @@ function PassiveTraits() {
     );
 }
 
-export default function AboutSection() {
+export default function AboutSection({ sectionIndex }) {
     return (
         <section id="about" className="about-section">
-            <SectionHeader />
+            <SectionHeader index={sectionIndex} />
             <div className="about-grid">
                 <CharacterSheet />
                 <StorySection />

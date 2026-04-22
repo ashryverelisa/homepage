@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { PROJECTS } from '../constants';
 
-export default function ProjectsSection() {
+export default function ProjectsSection({ sectionIndex }) {
     const [selected, setSelected] = useState(null);
 
     return (
         <section id="projects" className="projects-section">
             <div className="section-header">
-                <span className="section-tag">// SECTION_03</span>
+                <span className="section-tag">// SECTION_{String(sectionIndex).padStart(2, '0')}</span>
                 <h2 className="section-title glitch" data-text="QUEST LOG">
                     <span className="title-bracket">&lt;</span> QUEST LOG{' '}
                     <span className="title-bracket">/&gt;</span>

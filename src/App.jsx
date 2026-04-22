@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection.jsx'
 import ProjectsSection from './components/ProjectsSection.jsx'
 import NpcQuotesSection from './components/NpcQuotesSection.jsx'
 import ContactSection from './components/ContactSection.jsx'
+import SkillsSection from "./components/SkillsSection.jsx";
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
       <Navbar/>
       <main className="main-content">
           <HeroSection/>
-          <AboutSection/>
-          <ProjectsSection/>
-          <NpcQuotesSection/>
-          <ContactSection/>
+          <AboutSection sectionIndex={2} />
+          <SkillsSection sectionIndex={3} />
+          <ProjectsSection sectionIndex={4} />
+          <NpcQuotesSection sectionIndex={5} />
+          <ContactSection sectionIndex={6} />
           <footer className="footer">
               <div className="footer-inner">
                   <span className="footer-code">&lt;/&gt;</span>
