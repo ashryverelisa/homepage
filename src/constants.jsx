@@ -7,7 +7,6 @@ export const ABOUT = {
         { label: 'GILDE',      value: 'Backend Developer' },
         { label: 'HERKUNFT',   value: 'Die digitale Welt' },
         { label: 'HAUPTWAFFE', value: 'Mechanische Tastatur' },
-        { label: 'SPRACHEN',   value: 'C#, VB, PHP' },
         { label: 'GENRE',      value: 'LitRPG' },
         { label: 'BUFF',       value: '☕ Koffein-Aura' },
         { label: 'STATUS',     value: 'VERFÜGBAR', accent: true },
@@ -182,6 +181,35 @@ export const SKILLS = {
         { label: 'Weisheit',         value: 88, desc: 'Architektur' },
         { label: 'Charisma',         value: 80, desc: 'Kommunikation' },
         { label: 'Glück',            value: 77, desc: 'Fehlerfreie Deploys' },
+    ],
+};
+
+export const LOADING = {
+    START_DELAY_MS: 150,
+    LINE_DELAY_MS:  280,
+    DONE_DELAY_MS:  450,
+    LINES: [
+        'SYSTEM BOOT INITIATING...',
+        'LADE SPIELERDATEN...',
+        'VERBINDE MIT GILDEN-SERVER...',
+        'AKTIVIERE KOFFEIN-AURA...',
+        'HELD-PROFIL GELADEN.',
+        'WILLKOMMEN, ABENTEURER.',
+    ],
+};
+
+export const HERO_CHARACTER = {
+    MESSAGES: [
+        '> Ich habe noch 9999 Bugs auf meiner Quest-Liste.',
+        '> Kaffee: +50 Fokus. Wirkung hält 30 Minuten an.',
+        '> Freitags gibt es keinen Deploy. Das ist ein Omen.',
+        '> Kritischer Treffer! Pull Request genehmigt!',
+        '> Der perfekte Code existiert laut Legende. Ich suche noch.',
+        '> WARNUNG: Läuft auf 3h Schlaf + Koffein-Aura.',
+        '> Git blame zeigt... ich wars selbst. Schande.',
+        '> Off-by-one Fehler beseitigt. Erfahrung +500.',
+        '> Merge Conflict mit dem Universum. Ich verliere.',
+        '> sudo make me a sandwich — Befehl nicht gefunden.',
     ],
 };
 

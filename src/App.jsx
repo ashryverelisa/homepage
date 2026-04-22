@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import './App.css'
 import Navbar from './components/Navbar'
 import StarrySky from "./components/StarrySky.jsx";
@@ -7,10 +8,27 @@ import ProjectsSection from './components/ProjectsSection.jsx'
 import NpcQuotesSection from './components/NpcQuotesSection.jsx'
 import ContactSection from './components/ContactSection.jsx'
 import SkillsSection from "./components/SkillsSection.jsx";
+import ScrollProgressBar from './components/ScrollProgressBar.jsx';
+import LoadingScreen from './components/LoadingScreen.jsx';
+import KonamiEffect from './components/KonamiEffect.jsx';
 
 function App() {
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        if (!loaded) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => { document.body.style.overflow = ''; };
+    }, [loaded]);
+
   return (
     <>
+      {!loaded && <LoadingScreen onDone={() => setLoaded(true)} />}
+      <ScrollProgressBar />
+      <KonamiEffect />
       <StarrySky/>
       <Navbar/>
       <main className="main-content">
